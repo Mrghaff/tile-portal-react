@@ -1,0 +1,141 @@
+.card {
+  display: flex;
+  position: relative;
+  min-height: 188px;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  text-align: right;
+  transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #acbfb1;
+  box-shadow: 0 7px 22px #173e3410;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.iconbox {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf4ee;
+  color: #3b6550;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #f1f4ec;
+  color: #687b57;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  color: #4d695d;
+  font-size: 11px;
+}
+
+.bottom svg {
+  width: 18px;
+  height: 18px;
+}
+
+.featured {
+  border-color: #eadfd0;
+  background: #fcf7f0;
+}
+
+.featured .iconbox {
+  background: #f2e4d5;
+  color: var(--orange);
+}
+
+.featured .badge {
+  background: #f3e4d5;
+  color: #9c562c;
+}
+
+.featured .bottom {
+  color: #9c562c;
+}
+
+@media (max-width: 850px) {
+  .card {
+    padding: 19px;
+  }
+
+  .card p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    min-height: 182px;
+    padding: 15px 13px;
+    border-radius: 13px;
+  }
+
+  .head {
+    margin-bottom: 15px;
+  }
+
+  .iconbox {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .iconbox svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .badge {
+    padding: 3px 5px;
+    font-size: 8px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card p {
+    margin-bottom: 13px;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .bottom {
+    font-size: 9px;
+  }
+}
